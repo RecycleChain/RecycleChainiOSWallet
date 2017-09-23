@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41D4446D1F76834600BC06AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4446C1F76834600BC06AC /* AppDelegate.swift */; };
+		41D4446F1F76834600BC06AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4446E1F76834600BC06AC /* ViewController.swift */; };
+		41D444721F76834600BC06AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D444701F76834600BC06AC /* Main.storyboard */; };
+		41D444751F76834600BC06AC /* EcocoinWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41D444731F76834600BC06AC /* EcocoinWallet.xcdatamodeld */; };
+		41D444771F76834600BC06AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D444761F76834600BC06AC /* Assets.xcassets */; };
+		41D4447A1F76834600BC06AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D444781F76834600BC06AC /* LaunchScreen.storyboard */; };
+		41D444851F76834600BC06AC /* EcocoinWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444841F76834600BC06AC /* EcocoinWalletTests.swift */; };
+		41D444901F76834600BC06AC /* EcocoinWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4448F1F76834600BC06AC /* EcocoinWalletUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41D444811F76834600BC06AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41D444611F76834600BC06AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41D444681F76834600BC06AC;
+			remoteInfo = EcocoinWallet;
+		};
+		41D4448C1F76834600BC06AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41D444611F76834600BC06AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41D444681F76834600BC06AC;
+			remoteInfo = EcocoinWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		41D444691F76834600BC06AC /* EcocoinWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcocoinWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D4446C1F76834600BC06AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		41D4446E1F76834600BC06AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41D444711F76834600BC06AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		41D444741F76834600BC06AC /* EcocoinWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EcocoinWallet.xcdatamodel; sourceTree = "<group>"; };
+		41D444761F76834600BC06AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41D444791F76834600BC06AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		41D4447B1F76834600BC06AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41D444801F76834600BC06AC /* EcocoinWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcocoinWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D444841F76834600BC06AC /* EcocoinWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcocoinWalletTests.swift; sourceTree = "<group>"; };
+		41D444861F76834600BC06AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41D4448B1F76834600BC06AC /* EcocoinWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcocoinWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D4448F1F76834600BC06AC /* EcocoinWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcocoinWalletUITests.swift; sourceTree = "<group>"; };
+		41D444911F76834600BC06AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41D444661F76834600BC06AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D4447D1F76834600BC06AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D444881F76834600BC06AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41D444601F76834600BC06AC = {
+			isa = PBXGroup;
+			children = (
+				41D4446B1F76834600BC06AC /* EcocoinWallet */,
+				41D444831F76834600BC06AC /* EcocoinWalletTests */,
+				41D4448E1F76834600BC06AC /* EcocoinWalletUITests */,
+				41D4446A1F76834600BC06AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41D4446A1F76834600BC06AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41D444691F76834600BC06AC /* EcocoinWallet.app */,
+				41D444801F76834600BC06AC /* EcocoinWalletTests.xctest */,
+				41D4448B1F76834600BC06AC /* EcocoinWalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41D4446B1F76834600BC06AC /* EcocoinWallet */ = {
+			isa = PBXGroup;
+			children = (
+				41D4446C1F76834600BC06AC /* AppDelegate.swift */,
+				41D4446E1F76834600BC06AC /* ViewController.swift */,
+				41D444701F76834600BC06AC /* Main.storyboard */,
+				41D444761F76834600BC06AC /* Assets.xcassets */,
+				41D444781F76834600BC06AC /* LaunchScreen.storyboard */,
+				41D4447B1F76834600BC06AC /* Info.plist */,
+				41D444731F76834600BC06AC /* EcocoinWallet.xcdatamodeld */,
+			);
+			path = EcocoinWallet;
+			sourceTree = "<group>";
+		};
+		41D444831F76834600BC06AC /* EcocoinWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				41D444841F76834600BC06AC /* EcocoinWalletTests.swift */,
+				41D444861F76834600BC06AC /* Info.plist */,
+			);
+			path = EcocoinWalletTests;
+			sourceTree = "<group>";
+		};
+		41D4448E1F76834600BC06AC /* EcocoinWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				41D4448F1F76834600BC06AC /* EcocoinWalletUITests.swift */,
+				41D444911F76834600BC06AC /* Info.plist */,
+			);
+			path = EcocoinWalletUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41D444681F76834600BC06AC /* EcocoinWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41D444941F76834600BC06AC /* Build configuration list for PBXNativeTarget "EcocoinWallet" */;
+			buildPhases = (
+				41D444651F76834600BC06AC /* Sources */,
+				41D444661F76834600BC06AC /* Frameworks */,
+				41D444671F76834600BC06AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EcocoinWallet;
+			productName = EcocoinWallet;
+			productReference = 41D444691F76834600BC06AC /* EcocoinWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		41D4447F1F76834600BC06AC /* EcocoinWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41D444971F76834600BC06AC /* Build configuration list for PBXNativeTarget "EcocoinWalletTests" */;
+			buildPhases = (
+				41D4447C1F76834600BC06AC /* Sources */,
+				41D4447D1F76834600BC06AC /* Frameworks */,
+				41D4447E1F76834600BC06AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41D444821F76834600BC06AC /* PBXTargetDependency */,
+			);
+			name = EcocoinWalletTests;
+			productName = EcocoinWalletTests;
+			productReference = 41D444801F76834600BC06AC /* EcocoinWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		41D4448A1F76834600BC06AC /* EcocoinWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41D4449A1F76834600BC06AC /* Build configuration list for PBXNativeTarget "EcocoinWalletUITests" */;
+			buildPhases = (
+				41D444871F76834600BC06AC /* Sources */,
+				41D444881F76834600BC06AC /* Frameworks */,
+				41D444891F76834600BC06AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41D4448D1F76834600BC06AC /* PBXTargetDependency */,
+			);
+			name = EcocoinWalletUITests;
+			productName = EcocoinWalletUITests;
+			productReference = 41D4448B1F76834600BC06AC /* EcocoinWalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41D444611F76834600BC06AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Seductive-Mobile";
+				TargetAttributes = {
+					41D444681F76834600BC06AC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					41D4447F1F76834600BC06AC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 41D444681F76834600BC06AC;
+					};
+					41D4448A1F76834600BC06AC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 41D444681F76834600BC06AC;
+					};
+				};
+			};
+			buildConfigurationList = 41D444641F76834600BC06AC /* Build configuration list for PBXProject "EcocoinWallet" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 41D444601F76834600BC06AC;
+			productRefGroup = 41D4446A1F76834600BC06AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41D444681F76834600BC06AC /* EcocoinWallet */,
+				41D4447F1F76834600BC06AC /* EcocoinWalletTests */,
+				41D4448A1F76834600BC06AC /* EcocoinWalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41D444671F76834600BC06AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D4447A1F76834600BC06AC /* LaunchScreen.storyboard in Resources */,
+				41D444771F76834600BC06AC /* Assets.xcassets in Resources */,
+				41D444721F76834600BC06AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D4447E1F76834600BC06AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D444891F76834600BC06AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41D444651F76834600BC06AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D4446F1F76834600BC06AC /* ViewController.swift in Sources */,
+				41D444751F76834600BC06AC /* EcocoinWallet.xcdatamodeld in Sources */,
+				41D4446D1F76834600BC06AC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D4447C1F76834600BC06AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D444851F76834600BC06AC /* EcocoinWalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D444871F76834600BC06AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41D444901F76834600BC06AC /* EcocoinWalletUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41D444821F76834600BC06AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41D444681F76834600BC06AC /* EcocoinWallet */;
+			targetProxy = 41D444811F76834600BC06AC /* PBXContainerItemProxy */;
+		};
+		41D4448D1F76834600BC06AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41D444681F76834600BC06AC /* EcocoinWallet */;
+			targetProxy = 41D4448C1F76834600BC06AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		41D444701F76834600BC06AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41D444711F76834600BC06AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		41D444781F76834600BC06AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41D444791F76834600BC06AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41D444921F76834600BC06AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		41D444931F76834600BC06AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41D444951F76834600BC06AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44QNY7YAFQ;
+				INFOPLIST_FILE = EcocoinWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seductove-mobile.EcocoinWallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41D444961F76834600BC06AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44QNY7YAFQ;
+				INFOPLIST_FILE = EcocoinWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seductove-mobile.EcocoinWallet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		41D444981F76834600BC06AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44QNY7YAFQ;
+				INFOPLIST_FILE = EcocoinWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seductove-mobile.EcocoinWalletTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcocoinWallet.app/EcocoinWallet";
+			};
+			name = Debug;
+		};
+		41D444991F76834600BC06AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44QNY7YAFQ;
+				INFOPLIST_FILE = EcocoinWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seductove-mobile.EcocoinWalletTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EcocoinWallet.app/EcocoinWallet";
+			};
+			name = Release;
+		};
+		41D4449B1F76834600BC06AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44QNY7YAFQ;
+				INFOPLIST_FILE = EcocoinWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seductove-mobile.EcocoinWalletUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcocoinWallet;
+			};
+			name = Debug;
+		};
+		41D4449C1F76834600BC06AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 44QNY7YAFQ;
+				INFOPLIST_FILE = EcocoinWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.seductove-mobile.EcocoinWalletUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EcocoinWallet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41D444641F76834600BC06AC /* Build configuration list for PBXProject "EcocoinWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D444921F76834600BC06AC /* Debug */,
+				41D444931F76834600BC06AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41D444941F76834600BC06AC /* Build configuration list for PBXNativeTarget "EcocoinWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D444951F76834600BC06AC /* Debug */,
+				41D444961F76834600BC06AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41D444971F76834600BC06AC /* Build configuration list for PBXNativeTarget "EcocoinWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D444981F76834600BC06AC /* Debug */,
+				41D444991F76834600BC06AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41D4449A1F76834600BC06AC /* Build configuration list for PBXNativeTarget "EcocoinWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41D4449B1F76834600BC06AC /* Debug */,
+				41D4449C1F76834600BC06AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		41D444731F76834600BC06AC /* EcocoinWallet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				41D444741F76834600BC06AC /* EcocoinWallet.xcdatamodel */,
+			);
+			currentVersion = 41D444741F76834600BC06AC /* EcocoinWallet.xcdatamodel */;
+			path = EcocoinWallet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 41D444611F76834600BC06AC /* Project object */;
+}
