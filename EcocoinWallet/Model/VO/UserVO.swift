@@ -27,6 +27,10 @@ struct LoginCredentialsVO {
 extension UserVO: Mappable {
     
     init?(map: Map) {
+        if map.JSON["id"] == nil, map.JSON["token"] == nil {
+            return nil
+        }
+        
         id = 0
         firstName = ""
         lastName = ""

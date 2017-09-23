@@ -12,7 +12,7 @@ import Alamofire
 class BaseSessionService {
     
     class var baseURL:URL {
-//        let string = Bundle.main.infoDictionary!["API_SERVER"] as! String
+//      let string = Bundle.main.infoDictionary!["API_SERVER"] as! String
         let string = "http://localhost:3000"
         return URL(string: string)!
     }

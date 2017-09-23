@@ -12,6 +12,9 @@ target 'EcocoinWallet' do
   pod 'AlamofireImage', '3.2.0'
   pod 'PKHUD', '~> 4.0'
   pod 'ObjectMapper', '2.2.6'
+  pod 'Swinject', '2.1.0'
+  pod 'SwinjectStoryboard', :git => 'https://github.com/SeductiveMobile/SwinjectStoryboard.git'
+  pod 'RoutableIOS', '~> 0.0.2'
 
 #  pod 'EFQRCode'
 #  pod 'QRCodeReader'

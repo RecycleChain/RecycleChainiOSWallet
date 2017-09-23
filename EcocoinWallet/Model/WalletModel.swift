@@ -54,23 +54,48 @@ enum UserModelError: Error, InternalApiErrorConvertible {
 
 protocol WalletModel {
     var currentUser: UserVO? { get }
+    var currentBalance: UserBalanceVO? { get }
+    
     func signup(credentials: LoginCredentialsVO) -> ApiTask<UserVO, UserModelError>
-    func signin(credentials: LoginCredentialsVO) -> ApiTask<UserVO, UserModelError> 
+    func signin(credentials: LoginCredentialsVO) -> ApiTask<UserVO, UserModelError>
+    func loadBalance() -> ApiTask<UserBalanceVO, UserModelError>
+    func logout()
 }
 
 class WalletModelImpl: WalletModel {
     
     private var authService: AuthService
+    private var walletService: WalletService
     
-    init (authService: AuthService) {
+    init (authService: AuthService, walletService: WalletService) {
         self.authService = authService
+        self.walletService = walletService
         self.currentUser = UserDefautsPackager().unpack(key: "currentUser")
     }
     
     private(set) var currentUser: UserVO? {
         didSet {
             UserDefautsPackager().pack(object: currentUser, key: "currentUser")
+            self.walletService.token = currentUser?.token
+            self.authService.token = currentUser?.token
         }
+    }
+    
+    private(set) var currentBalance: UserBalanceVO? {
+        didSet {
+            UserDefautsPackager().pack(object: currentBalance, key: "currentBalance")
+        }
+    }
+    
+    func loadBalance() -> ApiTask<UserBalanceVO, UserModelError> {
+        let task = ApiTask<UserBalanceVO, UserModelError>()
+        task.dataRequest = walletService.balance(response: task.defaultHandler())
+        task.addSuccess { balance in
+            self.currentBalance = balance
+        }.addFailure { error in
+            self.logout()
+        }
+        return task
     }
     
     func signin(credentials: LoginCredentialsVO) -> ApiTask<UserVO, UserModelError> {
@@ -78,6 +103,8 @@ class WalletModelImpl: WalletModel {
         task.dataRequest = authService.signInRequest(credentials: credentials, response: task.defaultHandler())
         task.addSuccess { user in
             self.currentUser = user
+        }.addFailure { error in
+            self.logout()
         }
         return task
     }
@@ -85,9 +112,17 @@ class WalletModelImpl: WalletModel {
     func signup(credentials: LoginCredentialsVO) -> ApiTask<UserVO, UserModelError> {
         let task = ApiTask<UserVO, UserModelError>()
         task.dataRequest = authService.signUpRequest(credentials: credentials, response: task.defaultHandler())
-        task.addSuccess { user in
-            self.currentUser = user
-        }
         return task
+    }
+    
+    func logout() {
+        self.currentUser = nil
+        self.currentBalance = nil
+    }
+}
+
+extension WalletModel {
+    var isLoggedIn: Bool {
+        return self.currentUser != nil
     }
 }

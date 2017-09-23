@@ -10,6 +10,8 @@ import Foundation
 
 protocol SignInView: class {
     func showSignInSuccess()
+    func showLoading()
+    func showSignInError(error: String)
 }
 
 protocol SignInPresenter {
@@ -27,8 +29,11 @@ class SignInPresenterImpl: SignInPresenter {
     }
     
     func signIn(email: String, password: String) {
+        view?.showLoading()
         self.model?.signin(credentials: LoginCredentialsVO(firstName: nil, lastName: nil, email: email, password: password)).addSuccess({[weak self] user in
             self?.view?.showSignInSuccess()
+        }).addFailure({[weak self] error in
+            self?.view?.showSignInError(error: "Invalid email or password")
         })
     }
 }

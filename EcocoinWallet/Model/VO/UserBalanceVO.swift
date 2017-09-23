@@ -7,7 +7,15 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct WalletVO {
+struct UserBalanceVO: Mappable {
     
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        
+    }
 }

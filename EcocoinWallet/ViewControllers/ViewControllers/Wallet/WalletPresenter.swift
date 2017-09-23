@@ -9,18 +9,40 @@
 import Foundation
 
 protocol WalletPresenter {
-    
+    func appear()
+    func logout()
 }
 
 protocol WalletView: class {
-    
+    func replaceWithSignIn()
+    func showBalance(balance: UserBalanceVO)
 }
 
 class WalletPresenterImpl: WalletPresenter {
-    var view: WalletView?
-    var model: WalletModel?
-    init(view: WalletView?, model: WalletModel?) {
+    weak var view: WalletView?
+    var model: WalletModel
+    
+    init(view: WalletView, model: WalletModel) {
         self.view = view
         self.model = model
+    }
+    
+    func appear() {
+        if model.isLoggedIn {
+            loadBalance()
+        } else {
+            view?.replaceWithSignIn()
+        }
+    }
+    
+    func logout() {
+        model.logout()
+        view?.replaceWithSignIn()
+    }
+    
+    private func loadBalance() {
+        model.loadBalance().addSuccess {[weak self] balance in
+            self?.view?.showBalance(balance: balance)
+        }
     }
 }

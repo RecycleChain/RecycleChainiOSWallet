@@ -22,7 +22,7 @@
 		41D444A51F76A2D100BC06AC /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444A41F76A2D100BC06AC /* WalletViewController.swift */; };
 		41D444A71F76A2DC00BC06AC /* WalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444A61F76A2DC00BC06AC /* WalletPresenter.swift */; };
 		41D444AA1F76A34600BC06AC /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444A91F76A34600BC06AC /* WalletModel.swift */; };
-		41D444AD1F76A46F00BC06AC /* WalletVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444AC1F76A46F00BC06AC /* WalletVO.swift */; };
+		41D444AD1F76A46F00BC06AC /* UserBalanceVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444AC1F76A46F00BC06AC /* UserBalanceVO.swift */; };
 		41D444B01F76A4D200BC06AC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444AF1F76A4D200BC06AC /* AuthService.swift */; };
 		41D444B21F76A50800BC06AC /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444B11F76A50800BC06AC /* UserVO.swift */; };
 		41D444B71F76A70000BC06AC /* ApiTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444B41F76A70000BC06AC /* ApiTask.swift */; };
@@ -31,6 +31,12 @@
 		41D444BD1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444BC1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift */; };
 		41D444C11F76B6A500BC06AC /* XCTestExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444C01F76B67B00BC06AC /* XCTestExtentions.swift */; };
 		41D444C21F76B6A700BC06AC /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444BF1F76B67B00BC06AC /* URLExtensions.swift */; };
+		41D444C61F76C49B00BC06AC /* SwinjectAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444C51F76C49B00BC06AC /* SwinjectAssembler.swift */; };
+		41D444C81F76C4C400BC06AC /* WalletAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444C71F76C4C400BC06AC /* WalletAssembly.swift */; };
+		41D444CA1F76CAE600BC06AC /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444C91F76CAE600BC06AC /* WalletService.swift */; };
+		41D444CE1F76CB1900BC06AC /* WalletServiceRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444CD1F76CB1900BC06AC /* WalletServiceRequestBuilder.swift */; };
+		41D444D11F76D1AF00BC06AC /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444D01F76D1AF00BC06AC /* SignUpPresenter.swift */; };
+		41D444D31F76D1BC00BC06AC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444D21F76D1BC00BC06AC /* SignUpViewController.swift */; };
 		806C7B7AE22C832AFE540EF5 /* Pods_EcocoinWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7557A223B3FC924B1B8481A /* Pods_EcocoinWalletUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +78,7 @@
 		41D444A41F76A2D100BC06AC /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		41D444A61F76A2DC00BC06AC /* WalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPresenter.swift; sourceTree = "<group>"; };
 		41D444A91F76A34600BC06AC /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
-		41D444AC1F76A46F00BC06AC /* WalletVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVO.swift; sourceTree = "<group>"; };
+		41D444AC1F76A46F00BC06AC /* UserBalanceVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBalanceVO.swift; sourceTree = "<group>"; };
 		41D444AF1F76A4D200BC06AC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		41D444B11F76A50800BC06AC /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
 		41D444B41F76A70000BC06AC /* ApiTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTask.swift; sourceTree = "<group>"; };
@@ -81,6 +87,12 @@
 		41D444BC1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceRequestBuilder.swift; sourceTree = "<group>"; };
 		41D444BF1F76B67B00BC06AC /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		41D444C01F76B67B00BC06AC /* XCTestExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestExtentions.swift; sourceTree = "<group>"; };
+		41D444C51F76C49B00BC06AC /* SwinjectAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectAssembler.swift; sourceTree = "<group>"; };
+		41D444C71F76C4C400BC06AC /* WalletAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAssembly.swift; sourceTree = "<group>"; };
+		41D444C91F76CAE600BC06AC /* WalletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
+		41D444CD1F76CB1900BC06AC /* WalletServiceRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletServiceRequestBuilder.swift; sourceTree = "<group>"; };
+		41D444D01F76D1AF00BC06AC /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		41D444D21F76D1BC00BC06AC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4FFEA0967196ADA989AC9256 /* Pods-EcocoinWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcocoinWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcocoinWallet/Pods-EcocoinWallet.debug.xcconfig"; sourceTree = "<group>"; };
 		54F7D5BDA4A3DC27B3F50A76 /* Pods-EcocoinWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcocoinWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-EcocoinWallet/Pods-EcocoinWallet.release.xcconfig"; sourceTree = "<group>"; };
 		863BA1257AA45DD2E3611E95 /* Pods_EcocoinWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcocoinWalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +131,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		417CECBA1F76E7AF00D34B16 /* Distribute */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Distribute;
+			sourceTree = "<group>";
+		};
+		417CECBB1F76E7BE00D34B16 /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stock;
+			sourceTree = "<group>";
+		};
 		41D444601F76834600BC06AC = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +170,7 @@
 		41D4446B1F76834600BC06AC /* EcocoinWallet */ = {
 			isa = PBXGroup;
 			children = (
+				41D444C31F76C48800BC06AC /* DI */,
 				41D444AE1F76A4C200BC06AC /* Service */,
 				41D444A81F76A32B00BC06AC /* Model */,
 				41D4449D1F769D3600BC06AC /* ViewControllers */,
@@ -180,6 +207,8 @@
 		41D4449D1F769D3600BC06AC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				417CECBA1F76E7AF00D34B16 /* Distribute */,
+				41D444CF1F76D19D00BC06AC /* SignUp */,
 				41D444A31F76A2BE00BC06AC /* Wallet */,
 				41D444A01F769D5C00BC06AC /* SignIn */,
 			);
@@ -217,7 +246,7 @@
 		41D444AB1F76A46300BC06AC /* VO */ = {
 			isa = PBXGroup;
 			children = (
-				41D444AC1F76A46F00BC06AC /* WalletVO.swift */,
+				41D444AC1F76A46F00BC06AC /* UserBalanceVO.swift */,
 				41D444B11F76A50800BC06AC /* UserVO.swift */,
 			);
 			path = VO;
@@ -226,8 +255,9 @@
 		41D444AE1F76A4C200BC06AC /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				41D444AF1F76A4D200BC06AC /* AuthService.swift */,
-				41D444BC1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift */,
+				417CECBB1F76E7BE00D34B16 /* Stock */,
+				41D444CC1F76CB0000BC06AC /* Wallet */,
+				41D444CB1F76CAF900BC06AC /* Auth */,
 				41D444B31F76A70000BC06AC /* General */,
 			);
 			path = Service;
@@ -250,6 +280,50 @@
 				41D444C01F76B67B00BC06AC /* XCTestExtentions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		41D444C31F76C48800BC06AC /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				41D444C41F76C48C00BC06AC /* Assembles */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		41D444C41F76C48C00BC06AC /* Assembles */ = {
+			isa = PBXGroup;
+			children = (
+				41D444C51F76C49B00BC06AC /* SwinjectAssembler.swift */,
+				41D444C71F76C4C400BC06AC /* WalletAssembly.swift */,
+			);
+			path = Assembles;
+			sourceTree = "<group>";
+		};
+		41D444CB1F76CAF900BC06AC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				41D444AF1F76A4D200BC06AC /* AuthService.swift */,
+				41D444BC1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		41D444CC1F76CB0000BC06AC /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				41D444C91F76CAE600BC06AC /* WalletService.swift */,
+				41D444CD1F76CB1900BC06AC /* WalletServiceRequestBuilder.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		41D444CF1F76D19D00BC06AC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				41D444D01F76D1AF00BC06AC /* SignUpPresenter.swift */,
+				41D444D21F76D1BC00BC06AC /* SignUpViewController.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		4C8AA07EBB8715F8E6CDDCCE /* Pods */ = {
@@ -557,19 +631,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D4449F1F769D4E00BC06AC /* SignInViewController.swift in Sources */,
-				41D444AD1F76A46F00BC06AC /* WalletVO.swift in Sources */,
+				41D444AD1F76A46F00BC06AC /* UserBalanceVO.swift in Sources */,
 				41D444B21F76A50800BC06AC /* UserVO.swift in Sources */,
 				41D4446F1F76834600BC06AC /* ViewController.swift in Sources */,
 				41D444751F76834600BC06AC /* EcocoinWallet.xcdatamodeld in Sources */,
+				41D444C81F76C4C400BC06AC /* WalletAssembly.swift in Sources */,
+				41D444CE1F76CB1900BC06AC /* WalletServiceRequestBuilder.swift in Sources */,
 				41D444B91F76A70000BC06AC /* BaseSessionService.swift in Sources */,
 				41D444B71F76A70000BC06AC /* ApiTask.swift in Sources */,
+				41D444C61F76C49B00BC06AC /* SwinjectAssembler.swift in Sources */,
 				41D444BD1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift in Sources */,
 				41D4446D1F76834600BC06AC /* AppDelegate.swift in Sources */,
 				41D444A71F76A2DC00BC06AC /* WalletPresenter.swift in Sources */,
 				41D444B81F76A70000BC06AC /* BaseServiceRequestBuilder.swift in Sources */,
 				41D444A21F769D7100BC06AC /* SignInPresenter.swift in Sources */,
+				41D444D31F76D1BC00BC06AC /* SignUpViewController.swift in Sources */,
 				41D444B01F76A4D200BC06AC /* AuthService.swift in Sources */,
 				41D444AA1F76A34600BC06AC /* WalletModel.swift in Sources */,
+				41D444CA1F76CAE600BC06AC /* WalletService.swift in Sources */,
+				41D444D11F76D1AF00BC06AC /* SignUpPresenter.swift in Sources */,
 				41D444A51F76A2D100BC06AC /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

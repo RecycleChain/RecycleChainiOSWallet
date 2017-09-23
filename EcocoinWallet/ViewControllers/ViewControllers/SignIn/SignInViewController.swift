@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import PKHUD
 
 class SignInViewController: UIViewController, SignInView {
 
-    private var presenter: SignInPresenter?
+    var presenter: SignInPresenter?
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -44,6 +45,16 @@ class SignInViewController: UIViewController, SignInView {
     
     func showSignInSuccess() {
         print("Signin success")
+        HUD.flash(.success)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func showLoading() {
+        HUD.show(.progress)
+    }
+    
+    func showSignInError(error: String) {
+        HUD.flash(.labeledError(title: "Error", subtitle:  error), delay: 1.5)
     }
     
 }

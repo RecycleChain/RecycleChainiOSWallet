@@ -30,7 +30,7 @@ class AuthServiceRequestBuilder: AuthServiceRequestBuilderProtocol {
     }
     
     func signin(email: String, password: String) -> AuthServiceRequestBuilderProtocol {
-        self.route = (.post, "users/api/login", ["email": email, "password": password])
+        self.route = (.post, "/api/auth/signin", ["email": email, "password": password])
         return self
     }
     

@@ -11,6 +11,9 @@ import AlamofireObjectMapper
 import ObjectMapper
 
 protocol AuthService {
+    
+    var token:String? { set get }
+    
     @discardableResult
     func signInRequest(credentials: LoginCredentialsVO, response: @escaping((DataResponse<UserVO>)->Void)) -> DataRequest
     @discardableResult
