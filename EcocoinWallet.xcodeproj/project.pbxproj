@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EE7531537A8554A7290F3F8 /* Pods_EcocoinWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0CA7794946D8EEC82F9182 /* Pods_EcocoinWallet.framework */; };
+		29CA26464D87000859BFA187 /* Pods_EcocoinWalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863BA1257AA45DD2E3611E95 /* Pods_EcocoinWalletTests.framework */; };
 		41D4446D1F76834600BC06AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4446C1F76834600BC06AC /* AppDelegate.swift */; };
 		41D4446F1F76834600BC06AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4446E1F76834600BC06AC /* ViewController.swift */; };
 		41D444721F76834600BC06AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D444701F76834600BC06AC /* Main.storyboard */; };
@@ -15,6 +17,21 @@
 		41D4447A1F76834600BC06AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D444781F76834600BC06AC /* LaunchScreen.storyboard */; };
 		41D444851F76834600BC06AC /* EcocoinWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444841F76834600BC06AC /* EcocoinWalletTests.swift */; };
 		41D444901F76834600BC06AC /* EcocoinWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4448F1F76834600BC06AC /* EcocoinWalletUITests.swift */; };
+		41D4449F1F769D4E00BC06AC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4449E1F769D4E00BC06AC /* SignInViewController.swift */; };
+		41D444A21F769D7100BC06AC /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444A11F769D7100BC06AC /* SignInPresenter.swift */; };
+		41D444A51F76A2D100BC06AC /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444A41F76A2D100BC06AC /* WalletViewController.swift */; };
+		41D444A71F76A2DC00BC06AC /* WalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444A61F76A2DC00BC06AC /* WalletPresenter.swift */; };
+		41D444AA1F76A34600BC06AC /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444A91F76A34600BC06AC /* WalletModel.swift */; };
+		41D444AD1F76A46F00BC06AC /* WalletVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444AC1F76A46F00BC06AC /* WalletVO.swift */; };
+		41D444B01F76A4D200BC06AC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444AF1F76A4D200BC06AC /* AuthService.swift */; };
+		41D444B21F76A50800BC06AC /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444B11F76A50800BC06AC /* UserVO.swift */; };
+		41D444B71F76A70000BC06AC /* ApiTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444B41F76A70000BC06AC /* ApiTask.swift */; };
+		41D444B81F76A70000BC06AC /* BaseServiceRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444B51F76A70000BC06AC /* BaseServiceRequestBuilder.swift */; };
+		41D444B91F76A70000BC06AC /* BaseSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444B61F76A70000BC06AC /* BaseSessionService.swift */; };
+		41D444BD1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444BC1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift */; };
+		41D444C11F76B6A500BC06AC /* XCTestExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444C01F76B67B00BC06AC /* XCTestExtentions.swift */; };
+		41D444C21F76B6A700BC06AC /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D444BF1F76B67B00BC06AC /* URLExtensions.swift */; };
+		806C7B7AE22C832AFE540EF5 /* Pods_EcocoinWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7557A223B3FC924B1B8481A /* Pods_EcocoinWalletUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25AB31AA3C76DF6D4F34DC33 /* Pods-EcocoinWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcocoinWalletTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcocoinWalletTests/Pods-EcocoinWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
 		41D444691F76834600BC06AC /* EcocoinWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcocoinWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D4446C1F76834600BC06AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D4446E1F76834600BC06AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +67,28 @@
 		41D4448B1F76834600BC06AC /* EcocoinWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcocoinWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D4448F1F76834600BC06AC /* EcocoinWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcocoinWalletUITests.swift; sourceTree = "<group>"; };
 		41D444911F76834600BC06AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41D4449E1F769D4E00BC06AC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		41D444A11F769D7100BC06AC /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		41D444A41F76A2D100BC06AC /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		41D444A61F76A2DC00BC06AC /* WalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPresenter.swift; sourceTree = "<group>"; };
+		41D444A91F76A34600BC06AC /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		41D444AC1F76A46F00BC06AC /* WalletVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVO.swift; sourceTree = "<group>"; };
+		41D444AF1F76A4D200BC06AC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		41D444B11F76A50800BC06AC /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
+		41D444B41F76A70000BC06AC /* ApiTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTask.swift; sourceTree = "<group>"; };
+		41D444B51F76A70000BC06AC /* BaseServiceRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseServiceRequestBuilder.swift; sourceTree = "<group>"; };
+		41D444B61F76A70000BC06AC /* BaseSessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSessionService.swift; sourceTree = "<group>"; };
+		41D444BC1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceRequestBuilder.swift; sourceTree = "<group>"; };
+		41D444BF1F76B67B00BC06AC /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		41D444C01F76B67B00BC06AC /* XCTestExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestExtentions.swift; sourceTree = "<group>"; };
+		4FFEA0967196ADA989AC9256 /* Pods-EcocoinWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcocoinWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcocoinWallet/Pods-EcocoinWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		54F7D5BDA4A3DC27B3F50A76 /* Pods-EcocoinWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcocoinWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-EcocoinWallet/Pods-EcocoinWallet.release.xcconfig"; sourceTree = "<group>"; };
+		863BA1257AA45DD2E3611E95 /* Pods_EcocoinWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcocoinWalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A0CA7794946D8EEC82F9182 /* Pods_EcocoinWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcocoinWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B035A560C09392F4FC95A1A /* Pods-EcocoinWalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcocoinWalletUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EcocoinWalletUITests/Pods-EcocoinWalletUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C094091E58BBAE33834F5A94 /* Pods-EcocoinWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcocoinWalletTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EcocoinWalletTests/Pods-EcocoinWalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		E7557A223B3FC924B1B8481A /* Pods_EcocoinWalletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcocoinWalletUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A9EA4A282539133DD3C805 /* Pods-EcocoinWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcocoinWalletUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcocoinWalletUITests/Pods-EcocoinWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE7531537A8554A7290F3F8 /* Pods_EcocoinWallet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CA26464D87000859BFA187 /* Pods_EcocoinWalletTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				806C7B7AE22C832AFE540EF5 /* Pods_EcocoinWalletUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +126,8 @@
 				41D444831F76834600BC06AC /* EcocoinWalletTests */,
 				41D4448E1F76834600BC06AC /* EcocoinWalletUITests */,
 				41D4446A1F76834600BC06AC /* Products */,
+				4C8AA07EBB8715F8E6CDDCCE /* Pods */,
+				B73CE163400DE7317A7FE570 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +144,9 @@
 		41D4446B1F76834600BC06AC /* EcocoinWallet */ = {
 			isa = PBXGroup;
 			children = (
+				41D444AE1F76A4C200BC06AC /* Service */,
+				41D444A81F76A32B00BC06AC /* Model */,
+				41D4449D1F769D3600BC06AC /* ViewControllers */,
 				41D4446C1F76834600BC06AC /* AppDelegate.swift */,
 				41D4446E1F76834600BC06AC /* ViewController.swift */,
 				41D444701F76834600BC06AC /* Main.storyboard */,
@@ -113,6 +161,7 @@
 		41D444831F76834600BC06AC /* EcocoinWalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				41D444BE1F76B67B00BC06AC /* Extensions */,
 				41D444841F76834600BC06AC /* EcocoinWalletTests.swift */,
 				41D444861F76834600BC06AC /* Info.plist */,
 			);
@@ -128,6 +177,104 @@
 			path = EcocoinWalletUITests;
 			sourceTree = "<group>";
 		};
+		41D4449D1F769D3600BC06AC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				41D444A31F76A2BE00BC06AC /* Wallet */,
+				41D444A01F769D5C00BC06AC /* SignIn */,
+			);
+			name = ViewControllers;
+			path = ViewControllers/ViewControllers;
+			sourceTree = "<group>";
+		};
+		41D444A01F769D5C00BC06AC /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				41D444A11F769D7100BC06AC /* SignInPresenter.swift */,
+				41D4449E1F769D4E00BC06AC /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		41D444A31F76A2BE00BC06AC /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				41D444A41F76A2D100BC06AC /* WalletViewController.swift */,
+				41D444A61F76A2DC00BC06AC /* WalletPresenter.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		41D444A81F76A32B00BC06AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41D444AB1F76A46300BC06AC /* VO */,
+				41D444A91F76A34600BC06AC /* WalletModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		41D444AB1F76A46300BC06AC /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				41D444AC1F76A46F00BC06AC /* WalletVO.swift */,
+				41D444B11F76A50800BC06AC /* UserVO.swift */,
+			);
+			path = VO;
+			sourceTree = "<group>";
+		};
+		41D444AE1F76A4C200BC06AC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				41D444AF1F76A4D200BC06AC /* AuthService.swift */,
+				41D444BC1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift */,
+				41D444B31F76A70000BC06AC /* General */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		41D444B31F76A70000BC06AC /* General */ = {
+			isa = PBXGroup;
+			children = (
+				41D444B41F76A70000BC06AC /* ApiTask.swift */,
+				41D444B51F76A70000BC06AC /* BaseServiceRequestBuilder.swift */,
+				41D444B61F76A70000BC06AC /* BaseSessionService.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		41D444BE1F76B67B00BC06AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41D444BF1F76B67B00BC06AC /* URLExtensions.swift */,
+				41D444C01F76B67B00BC06AC /* XCTestExtentions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C8AA07EBB8715F8E6CDDCCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FFEA0967196ADA989AC9256 /* Pods-EcocoinWallet.debug.xcconfig */,
+				54F7D5BDA4A3DC27B3F50A76 /* Pods-EcocoinWallet.release.xcconfig */,
+				25AB31AA3C76DF6D4F34DC33 /* Pods-EcocoinWalletTests.debug.xcconfig */,
+				C094091E58BBAE33834F5A94 /* Pods-EcocoinWalletTests.release.xcconfig */,
+				F9A9EA4A282539133DD3C805 /* Pods-EcocoinWalletUITests.debug.xcconfig */,
+				9B035A560C09392F4FC95A1A /* Pods-EcocoinWalletUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B73CE163400DE7317A7FE570 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A0CA7794946D8EEC82F9182 /* Pods_EcocoinWallet.framework */,
+				863BA1257AA45DD2E3611E95 /* Pods_EcocoinWalletTests.framework */,
+				E7557A223B3FC924B1B8481A /* Pods_EcocoinWalletUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D444941F76834600BC06AC /* Build configuration list for PBXNativeTarget "EcocoinWallet" */;
 			buildPhases = (
+				10BBD464A3602017B3F69205 /* [CP] Check Pods Manifest.lock */,
 				41D444651F76834600BC06AC /* Sources */,
 				41D444661F76834600BC06AC /* Frameworks */,
 				41D444671F76834600BC06AC /* Resources */,
+				57C4A6A85AF9AB80BE663E59 /* [CP] Embed Pods Frameworks */,
+				18335E1F9C09F2D2E23B08A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +302,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D444971F76834600BC06AC /* Build configuration list for PBXNativeTarget "EcocoinWalletTests" */;
 			buildPhases = (
+				32FE1E456386908DE529FF19 /* [CP] Check Pods Manifest.lock */,
 				41D4447C1F76834600BC06AC /* Sources */,
 				41D4447D1F76834600BC06AC /* Frameworks */,
 				41D4447E1F76834600BC06AC /* Resources */,
+				B25C40D0BFAF2F7D502EB3C6 /* [CP] Embed Pods Frameworks */,
+				8F36DDDD822CDC0BDA9EA6B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +323,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D4449A1F76834600BC06AC /* Build configuration list for PBXNativeTarget "EcocoinWalletUITests" */;
 			buildPhases = (
+				E9E51DD7C164D31C8F6CE4C2 /* [CP] Check Pods Manifest.lock */,
 				41D444871F76834600BC06AC /* Sources */,
 				41D444881F76834600BC06AC /* Frameworks */,
 				41D444891F76834600BC06AC /* Resources */,
+				BC030C294FE9C88158037521 /* [CP] Embed Pods Frameworks */,
+				619C92BC72D0C2C5B6D24C60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,14 +413,164 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10BBD464A3602017B3F69205 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		18335E1F9C09F2D2E23B08A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EcocoinWallet/Pods-EcocoinWallet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32FE1E456386908DE529FF19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57C4A6A85AF9AB80BE663E59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EcocoinWallet/Pods-EcocoinWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		619C92BC72D0C2C5B6D24C60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EcocoinWalletUITests/Pods-EcocoinWalletUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F36DDDD822CDC0BDA9EA6B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EcocoinWalletTests/Pods-EcocoinWalletTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B25C40D0BFAF2F7D502EB3C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EcocoinWalletTests/Pods-EcocoinWalletTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC030C294FE9C88158037521 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EcocoinWalletUITests/Pods-EcocoinWalletUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9E51DD7C164D31C8F6CE4C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41D444651F76834600BC06AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D4449F1F769D4E00BC06AC /* SignInViewController.swift in Sources */,
+				41D444AD1F76A46F00BC06AC /* WalletVO.swift in Sources */,
+				41D444B21F76A50800BC06AC /* UserVO.swift in Sources */,
 				41D4446F1F76834600BC06AC /* ViewController.swift in Sources */,
 				41D444751F76834600BC06AC /* EcocoinWallet.xcdatamodeld in Sources */,
+				41D444B91F76A70000BC06AC /* BaseSessionService.swift in Sources */,
+				41D444B71F76A70000BC06AC /* ApiTask.swift in Sources */,
+				41D444BD1F76B1FE00BC06AC /* AuthServiceRequestBuilder.swift in Sources */,
 				41D4446D1F76834600BC06AC /* AppDelegate.swift in Sources */,
+				41D444A71F76A2DC00BC06AC /* WalletPresenter.swift in Sources */,
+				41D444B81F76A70000BC06AC /* BaseServiceRequestBuilder.swift in Sources */,
+				41D444A21F769D7100BC06AC /* SignInPresenter.swift in Sources */,
+				41D444B01F76A4D200BC06AC /* AuthService.swift in Sources */,
+				41D444AA1F76A34600BC06AC /* WalletModel.swift in Sources */,
+				41D444A51F76A2D100BC06AC /* WalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +579,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D444851F76834600BC06AC /* EcocoinWalletTests.swift in Sources */,
+				41D444C21F76B6A700BC06AC /* URLExtensions.swift in Sources */,
+				41D444C11F76B6A500BC06AC /* XCTestExtentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +736,7 @@
 		};
 		41D444951F76834600BC06AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FFEA0967196ADA989AC9256 /* Pods-EcocoinWallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -436,13 +745,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.seductove-mobile.EcocoinWallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		41D444961F76834600BC06AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54F7D5BDA4A3DC27B3F50A76 /* Pods-EcocoinWallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,13 +761,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.seductove-mobile.EcocoinWallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		41D444981F76834600BC06AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25AB31AA3C76DF6D4F34DC33 /* Pods-EcocoinWalletTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +786,7 @@
 		};
 		41D444991F76834600BC06AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C094091E58BBAE33834F5A94 /* Pods-EcocoinWalletTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +804,7 @@
 		};
 		41D4449B1F76834600BC06AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9A9EA4A282539133DD3C805 /* Pods-EcocoinWalletUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +821,7 @@
 		};
 		41D4449C1F76834600BC06AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B035A560C09392F4FC95A1A /* Pods-EcocoinWalletUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
