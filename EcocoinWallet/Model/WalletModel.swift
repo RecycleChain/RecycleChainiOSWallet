@@ -85,7 +85,7 @@ protocol WalletModel {
     func loadStocks() -> ApiTask<[StockVO], UserModelError>
     
     func createStock(phone: String?, address: String?, details: String?) -> ApiTask<StockVO, UserModelError>
-    
+    func createTransaction(materials: [MaterialVO], receiverId: Int) -> ApiTask<TransactionVO, UserModelError>
 }
 
 class WalletModelImpl: WalletModel {
@@ -99,30 +99,35 @@ class WalletModelImpl: WalletModel {
         self.walletService = walletService
         self.stockService = stockService
 
-        /*
         self.currentUser = UserDefautsPackager().unpack(key: "currentUser")
         self.currentBalance = UserDefautsPackager().unpack(key: "currentBalance")
         self.transactions = UserDefautsPackager().unpackArray(key: "transactions")
         self.stock = UserDefautsPackager().unpack(key: "stock")
-        */
+ 
+        updateTokens()
         
-        
+        /*
         self.currentUser = UserVO(id: 0, firstName: "Kirill", lastName: "Kirikov", email: "olmer.k@gmail.com", token: "token")
-        self.currentBalance = UserBalanceVO(balance: 0.0)
+        self.currentBalance = UserBalanceVO(balance: "0.0")
         self.transactions = [
             UserTransactionVO(id: 0, date: Date(), amount: 100.0, currency: "EC"),
             UserTransactionVO(id: 1, date: Date(), amount: -15.5, currency: "PC"),
             UserTransactionVO(id: 2, date: Date(), amount: 25.0, currency: "EC")
         ]
-        self.stock = StockVO(id: "0")
+        self.stock = StockVO(id: 0)
+         */
+    }
+    
+    private func updateTokens() {
+        self.walletService.token = currentUser?.token
+        self.authService.token = currentUser?.token
+        self.stockService.token = currentUser?.token
     }
     
     private(set) var currentUser: UserVO? {
         didSet {
             UserDefautsPackager().pack(object: currentUser, key: "currentUser")
-            self.walletService.token = currentUser?.token
-            self.authService.token = currentUser?.token
-            self.stockService.token = currentUser?.token
+            updateTokens()
         }
     }
     
@@ -169,6 +174,8 @@ class WalletModelImpl: WalletModel {
         task.dataRequest = stockService.mystocks(response: task.defaultHandler())
         task.addSuccess {[weak self] stocks in
             self?.stock = stocks.first
+        }.addFailure { error in
+            print("Error loading my stocks: \(error)")
         }
         return task
     }
@@ -193,11 +200,26 @@ class WalletModelImpl: WalletModel {
     func logout() {
         self.currentUser = nil
         self.currentBalance = nil
+        self.transactions = nil
+        self.stock = nil
+        updateTokens()
     }
     
     func createStock(phone: String?, address: String?, details: String?) -> ApiTask<StockVO, UserModelError> {
         let task = ApiTask<StockVO, UserModelError>()
         task.dataRequest = stockService.createStock(phone: phone, address: address, details: details, response: task.defaultHandler())
+        task.addSuccess {[weak self] stock in
+            self?.stock = stock
+        }.addFailure { error in
+            print("Error creating stock: \(error)")
+        }
+        return task
+    }
+    
+    func createTransaction(materials: [MaterialVO], receiverId: Int) -> ApiTask<TransactionVO, UserModelError> {
+
+        let task = ApiTask<TransactionVO, UserModelError>()
+        task.dataRequest = stockService.createTransaction(stockId: stock!.id, materials: materials, receiverId: receiverId, response: task.defaultHandler())
         return task
     }
 }

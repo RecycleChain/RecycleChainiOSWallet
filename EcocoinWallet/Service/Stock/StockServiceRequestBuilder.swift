@@ -14,6 +14,7 @@ protocol StockServiceRequestBuilderProtocol: BaseServiceRequestBuilderProtocol, 
     func stocks() -> StockServiceRequestBuilderProtocol
     func mystock() -> StockServiceRequestBuilderProtocol
     func createstock(phone: String?, address: String?, details: String?) -> StockServiceRequestBuilderProtocol
+    func createtransaction(stockId: Int, materials: [MaterialVO], receiverId: Int) -> StockServiceRequestBuilderProtocol
 }
 
 class StockServiceRequestBuilder: StockServiceRequestBuilderProtocol {
@@ -46,7 +47,15 @@ class StockServiceRequestBuilder: StockServiceRequestBuilderProtocol {
         if let details = details {
             params["details"] = details
         }
+        
+        params["hours"] = ""
+        
         self.route = (.post, "/api/stock", params)
+        return self
+    }
+    
+    func createtransaction(stockId: Int, materials: [MaterialVO], receiverId: Int) -> StockServiceRequestBuilderProtocol {
+        self.route = (.post, "/api/transaction/\(stockId)/\(receiverId)", ["trash": materials.toJSON()])
         return self
     }
 }

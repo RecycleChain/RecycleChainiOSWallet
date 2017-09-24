@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		0EE7531537A8554A7290F3F8 /* Pods_EcocoinWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0CA7794946D8EEC82F9182 /* Pods_EcocoinWallet.framework */; };
 		29CA26464D87000859BFA187 /* Pods_EcocoinWalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863BA1257AA45DD2E3611E95 /* Pods_EcocoinWalletTests.framework */; };
+		414FD2691F77D826009476EC /* TransactionVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414FD2681F77D826009476EC /* TransactionVO.swift */; };
 		41577BCF1F778DA00005D639 /* StockCreateFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41577BCE1F778DA00005D639 /* StockCreateFooterView.xib */; };
 		41577BD11F7792E90005D639 /* StockCreateFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41577BD01F7792E90005D639 /* StockCreateFooterView.swift */; };
 		41577BD31F77A8BE0005D639 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41577BD21F77A8BE0005D639 /* NewTransactionViewController.swift */; };
 		41577BD51F77A8F90005D639 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41577BD41F77A8F90005D639 /* AVFoundation.framework */; };
 		41577BD81F77AFE80005D639 /* TransactionAddMaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41577BD71F77AFE80005D639 /* TransactionAddMaterialTableViewCell.swift */; };
+		41577BDA1F77B35D0005D639 /* NewTransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41577BD91F77B35D0005D639 /* NewTransactionPresenter.swift */; };
+		41577BDC1F77B3DA0005D639 /* MaterialVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41577BDB1F77B3DA0005D639 /* MaterialVO.swift */; };
 		417CECBD1F77062000D34B16 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CECBC1F77062000D34B16 /* MyWalletViewController.swift */; };
 		417CECBF1F77063C00D34B16 /* MyWalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CECBE1F77063C00D34B16 /* MyWalletPresenter.swift */; };
 		417CECC11F770C0300D34B16 /* UserTransactionVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417CECC01F770C0300D34B16 /* UserTransactionVO.swift */; };
@@ -77,11 +80,14 @@
 
 /* Begin PBXFileReference section */
 		25AB31AA3C76DF6D4F34DC33 /* Pods-EcocoinWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcocoinWalletTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcocoinWalletTests/Pods-EcocoinWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		414FD2681F77D826009476EC /* TransactionVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVO.swift; sourceTree = "<group>"; };
 		41577BCE1F778DA00005D639 /* StockCreateFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockCreateFooterView.xib; sourceTree = "<group>"; };
 		41577BD01F7792E90005D639 /* StockCreateFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCreateFooterView.swift; sourceTree = "<group>"; };
 		41577BD21F77A8BE0005D639 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
 		41577BD41F77A8F90005D639 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		41577BD71F77AFE80005D639 /* TransactionAddMaterialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAddMaterialTableViewCell.swift; sourceTree = "<group>"; };
+		41577BD91F77B35D0005D639 /* NewTransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionPresenter.swift; sourceTree = "<group>"; };
+		41577BDB1F77B3DA0005D639 /* MaterialVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialVO.swift; sourceTree = "<group>"; };
 		417CECBC1F77062000D34B16 /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
 		417CECBE1F77063C00D34B16 /* MyWalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletPresenter.swift; sourceTree = "<group>"; };
 		417CECC01F770C0300D34B16 /* UserTransactionVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTransactionVO.swift; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 				417CECC61F77199A00D34B16 /* MyStockViewController.swift */,
 				417CECCF1F77207700D34B16 /* MyStockPresenter.swift */,
 				41577BD21F77A8BE0005D639 /* NewTransactionViewController.swift */,
+				41577BD91F77B35D0005D639 /* NewTransactionPresenter.swift */,
 			);
 			path = MyStock;
 			sourceTree = "<group>";
@@ -333,6 +340,8 @@
 				417CECC01F770C0300D34B16 /* UserTransactionVO.swift */,
 				41D444B11F76A50800BC06AC /* UserVO.swift */,
 				417CECD11F77838600D34B16 /* StockVO.swift */,
+				41577BDB1F77B3DA0005D639 /* MaterialVO.swift */,
+				414FD2681F77D826009476EC /* TransactionVO.swift */,
 			);
 			path = VO;
 			sourceTree = "<group>";
@@ -724,11 +733,14 @@
 				417CECBF1F77063C00D34B16 /* MyWalletPresenter.swift in Sources */,
 				417CECD81F77851900D34B16 /* StockAssembly.swift in Sources */,
 				417CECBD1F77062000D34B16 /* MyWalletViewController.swift in Sources */,
+				41577BDC1F77B3DA0005D639 /* MaterialVO.swift in Sources */,
 				41D444AD1F76A46F00BC06AC /* UserBalanceVO.swift in Sources */,
 				41D444B21F76A50800BC06AC /* UserVO.swift in Sources */,
 				41D4446F1F76834600BC06AC /* ViewController.swift in Sources */,
 				41D444751F76834600BC06AC /* EcocoinWallet.xcdatamodeld in Sources */,
 				41D444C81F76C4C400BC06AC /* WalletAssembly.swift in Sources */,
+				41577BDA1F77B35D0005D639 /* NewTransactionPresenter.swift in Sources */,
+				414FD2691F77D826009476EC /* TransactionVO.swift in Sources */,
 				41D444CE1F76CB1900BC06AC /* WalletServiceRequestBuilder.swift in Sources */,
 				417CECD01F77207700D34B16 /* MyStockPresenter.swift in Sources */,
 				417CECCE1F771C3100D34B16 /* TokenTypeTableViewCell.swift in Sources */,

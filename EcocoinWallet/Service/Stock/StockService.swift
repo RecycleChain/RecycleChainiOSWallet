@@ -15,6 +15,7 @@ protocol StockService {
     func stocks(response: @escaping((DataResponse<[StockVO]>)->Void)) -> DataRequest
     func mystocks(response: @escaping((DataResponse<[StockVO]>)-> Void)) -> DataRequest
     func createStock(phone: String?, address: String?, details: String?, response: @escaping((DataResponse<StockVO>)-> Void)) -> DataRequest
+    func createTransaction(stockId: Int, materials: [MaterialVO], receiverId: Int, response: @escaping((DataResponse<TransactionVO>)-> Void)) -> DataRequest
 }
 
 class StockServiceImpl: BaseSessionService, StockService {
@@ -39,11 +40,16 @@ class StockServiceImpl: BaseSessionService, StockService {
     
     func mystocks(response: @escaping((DataResponse<[StockVO]>)-> Void)) -> DataRequest {
         let request = StockServiceRequestBuilder(token: token).mystock()
-        return manager.request(request).responseArray(completionHandler: response)
+        return manager.request(request).responseArray(queue: nil, keyPath: "stocks", context: nil, completionHandler: response)        
     }
 
     func createStock(phone: String?, address: String?, details: String?, response: @escaping((DataResponse<StockVO>)-> Void)) -> DataRequest {
         let request = StockServiceRequestBuilder(token: token).createstock(phone: phone, address: address, details: details)
         return manager.request(request).responseObject(completionHandler: response)
+    }
+    
+    func createTransaction(stockId: Int, materials: [MaterialVO], receiverId: Int, response: @escaping((DataResponse<TransactionVO>)-> Void)) -> DataRequest {
+        let request = StockServiceRequestBuilder(token: token).createtransaction(stockId: stockId, materials: materials, receiverId: receiverId)
+        return manager.request(request).responseObject(queue: nil, keyPath: "transaction", context: nil, completionHandler: response)
     }
 }

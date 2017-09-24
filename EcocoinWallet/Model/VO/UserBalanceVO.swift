@@ -11,10 +11,10 @@ import ObjectMapper
 
 struct UserBalanceVO: Mappable {
     
-    var balance: Double = 0.0
+    var balance: String = "0.0"
     init?(map: Map) { }
     
-    init(balance: Double) {
+    init(balance: String) {
         self.balance = balance
     }
     

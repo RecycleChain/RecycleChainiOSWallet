@@ -17,6 +17,10 @@ final class StockAssembly: Assembly {
             c.presenter = MyStockPresenterImpl(view: c, walletModel: r.resolve(WalletModel.self)!)
         }
         
+        container.storyboardInitCompleted(NewTransactionViewController.self) { r, c in
+            c.presenter = NewTransactionPresenterImpl(view: c, walletModel: r.resolve(WalletModel.self)!)
+        }
+        
         container.register(StockService.self) { r in
             StockServiceImpl()
         }

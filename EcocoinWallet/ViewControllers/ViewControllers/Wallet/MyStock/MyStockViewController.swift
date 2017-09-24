@@ -16,7 +16,11 @@ class MyStockViewController: UIViewController, MyStockView {
     private var createStockView: StockCreateFooterView?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presenter?.appear()
     }
 
@@ -26,6 +30,9 @@ class MyStockViewController: UIViewController, MyStockView {
     
     func showStock(stock: StockVO) {
         HUD.hide()
+        createStockView?.isHidden = true
+        tableView.isHidden = false
+        tableView.reloadData()
     }
     
     func showCreateStock() {
@@ -102,6 +109,15 @@ extension MyStockViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TokenTypeCell") as! TokenTypeTableViewCell
+        
+        if indexPath.row == 0 {
+            cell.tokenTypeLabel.text = "Paper"
+            cell.tokenPriceLabel.text = "100 kg | 10 EC"
+        } else {
+            cell.tokenTypeLabel.text = "Bio"
+            cell.tokenPriceLabel.text = "1000 kg | 9 EC"
+        }
+ 
         return cell
     }
     

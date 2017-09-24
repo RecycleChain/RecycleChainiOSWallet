@@ -50,7 +50,7 @@ class MyWalletViewController: UIViewController, MyWalletView {
     }
     
     func showBalance(balance: UserBalanceVO) {
-        self.balanceLabel.text = "\(balance.balance)"
+        self.balanceLabel.text = "\(Double(balance.balance)!) EC"
     }
     
     func showQRCodeImage(image: UIImage) {
