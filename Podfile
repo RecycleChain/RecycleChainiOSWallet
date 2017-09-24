@@ -15,9 +15,9 @@ target 'EcocoinWallet' do
   pod 'Swinject', '2.1.0'
   pod 'SwinjectStoryboard', :git => 'https://github.com/SeductiveMobile/SwinjectStoryboard.git'
   pod 'RoutableIOS', '~> 0.0.2'
-
-#  pod 'EFQRCode'
-#  pod 'QRCodeReader'
+  pod 'QRCode', '~> 2.0'
+  pod 'SwiftQRCode', '~> 3.0.2'
+  pod 'SnapKit', '~> 3.0.0'
 
   target 'EcocoinWalletTests' do
     inherit! :search_paths

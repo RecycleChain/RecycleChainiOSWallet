@@ -12,6 +12,7 @@ import Alamofire
 protocol WalletServiceRequestBuilderProtocol: BaseServiceRequestBuilderProtocol, URLRequestConvertible {
     init (token: String?)
     func balance() -> WalletServiceRequestBuilderProtocol
+    func transactions() -> WalletServiceRequestBuilderProtocol
 }
 
 class WalletServiceRequestBuilder: WalletServiceRequestBuilderProtocol {
@@ -25,6 +26,11 @@ class WalletServiceRequestBuilder: WalletServiceRequestBuilderProtocol {
     
     func balance() -> WalletServiceRequestBuilderProtocol {
         self.route = (.get, "/api/wallet/balance", [:])
+        return self
+    }
+    
+    func transactions() -> WalletServiceRequestBuilderProtocol {
+        self.route = (.get, "/api/wallet/transactions", [:])
         return self
     }
 }

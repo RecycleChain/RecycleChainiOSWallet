@@ -11,11 +11,14 @@ import ObjectMapper
 
 struct UserBalanceVO: Mappable {
     
-    init?(map: Map) {
-        
+    var balance: Double = 0.0
+    init?(map: Map) { }
+    
+    init(balance: Double) {
+        self.balance = balance
     }
     
     mutating func mapping(map: Map) {
-        
+        balance <- map["balance"]
     }
 }

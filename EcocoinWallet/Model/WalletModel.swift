@@ -28,6 +28,24 @@ class UserDefautsPackager {
         }
         return Mapper<T>().map(JSONString: string)
     }
+    
+    func packArray<T: BaseMappable>(objects: [T]?, key: String) {
+        if let objects = objects {
+            let string = objects.toJSONString()
+            UserDefaults.standard.set(string, forKey: key)
+        } else {
+            UserDefaults.standard.set(nil, forKey: key)
+        }
+        
+        UserDefaults.standard.synchronize()
+    }
+    
+    func unpackArray<T: BaseMappable>(key: String) -> [T]? {
+        guard let string = UserDefaults.standard.string(forKey: key) else {
+            return nil
+        }
+        return Mapper<T>().mapArray(JSONString: string)
+    }
 }
 
 enum UserModelError: Error, InternalApiErrorConvertible {
@@ -55,22 +73,48 @@ enum UserModelError: Error, InternalApiErrorConvertible {
 protocol WalletModel {
     var currentUser: UserVO? { get }
     var currentBalance: UserBalanceVO? { get }
+    var transactions: [UserTransactionVO]? { get }
+    var stock: StockVO? { get }
     
     func signup(credentials: LoginCredentialsVO) -> ApiTask<UserVO, UserModelError>
     func signin(credentials: LoginCredentialsVO) -> ApiTask<UserVO, UserModelError>
-    func loadBalance() -> ApiTask<UserBalanceVO, UserModelError>
     func logout()
+    
+    func loadBalance() -> ApiTask<UserBalanceVO, UserModelError>
+    func loadTransactions() -> ApiTask<[UserTransactionVO], UserModelError>
+    func loadStocks() -> ApiTask<[StockVO], UserModelError>
+    
+    func createStock(phone: String?, address: String?, details: String?) -> ApiTask<StockVO, UserModelError>
+    
 }
 
 class WalletModelImpl: WalletModel {
     
     private var authService: AuthService
     private var walletService: WalletService
+    private var stockService: StockService
     
-    init (authService: AuthService, walletService: WalletService) {
+    init (authService: AuthService, walletService: WalletService, stockService: StockService) {
         self.authService = authService
         self.walletService = walletService
+        self.stockService = stockService
+
+        /*
         self.currentUser = UserDefautsPackager().unpack(key: "currentUser")
+        self.currentBalance = UserDefautsPackager().unpack(key: "currentBalance")
+        self.transactions = UserDefautsPackager().unpackArray(key: "transactions")
+        self.stock = UserDefautsPackager().unpack(key: "stock")
+        */
+        
+        
+        self.currentUser = UserVO(id: 0, firstName: "Kirill", lastName: "Kirikov", email: "olmer.k@gmail.com", token: "token")
+        self.currentBalance = UserBalanceVO(balance: 0.0)
+        self.transactions = [
+            UserTransactionVO(id: 0, date: Date(), amount: 100.0, currency: "EC"),
+            UserTransactionVO(id: 1, date: Date(), amount: -15.5, currency: "PC"),
+            UserTransactionVO(id: 2, date: Date(), amount: 25.0, currency: "EC")
+        ]
+        self.stock = StockVO(id: "0")
     }
     
     private(set) var currentUser: UserVO? {
@@ -78,6 +122,7 @@ class WalletModelImpl: WalletModel {
             UserDefautsPackager().pack(object: currentUser, key: "currentUser")
             self.walletService.token = currentUser?.token
             self.authService.token = currentUser?.token
+            self.stockService.token = currentUser?.token
         }
     }
     
@@ -87,6 +132,27 @@ class WalletModelImpl: WalletModel {
         }
     }
     
+    private(set) var transactions: [UserTransactionVO]? {
+        didSet {
+            UserDefautsPackager().packArray(objects: transactions, key: "transactions")
+        }
+    }
+    
+    private(set) var stock: StockVO? {
+        didSet {
+            UserDefautsPackager().pack(object: stock, key: "stock")
+        }
+    }
+    
+    func loadTransactions() -> ApiTask<[UserTransactionVO], UserModelError> {
+        let task = ApiTask<[UserTransactionVO], UserModelError>()
+        task.dataRequest = walletService.transactions(response: task.defaultHandler())
+        task.addSuccess {[weak self] transactions in
+            self?.transactions = transactions
+        }
+        return task
+    }
+    
     func loadBalance() -> ApiTask<UserBalanceVO, UserModelError> {
         let task = ApiTask<UserBalanceVO, UserModelError>()
         task.dataRequest = walletService.balance(response: task.defaultHandler())
@@ -94,6 +160,15 @@ class WalletModelImpl: WalletModel {
             self.currentBalance = balance
         }.addFailure { error in
             self.logout()
+        }
+        return task
+    }
+    
+    func loadStocks() -> ApiTask<[StockVO], UserModelError> {
+        let task = ApiTask<[StockVO], UserModelError>()
+        task.dataRequest = stockService.mystocks(response: task.defaultHandler())
+        task.addSuccess {[weak self] stocks in
+            self?.stock = stocks.first
         }
         return task
     }
@@ -119,10 +194,22 @@ class WalletModelImpl: WalletModel {
         self.currentUser = nil
         self.currentBalance = nil
     }
+    
+    func createStock(phone: String?, address: String?, details: String?) -> ApiTask<StockVO, UserModelError> {
+        let task = ApiTask<StockVO, UserModelError>()
+        task.dataRequest = stockService.createStock(phone: phone, address: address, details: details, response: task.defaultHandler())
+        return task
+    }
 }
 
 extension WalletModel {
     var isLoggedIn: Bool {
         return self.currentUser != nil
+    }
+}
+
+extension WalletModel {
+    var hasStock: Bool {
+        return self.stock != nil
     }
 }

@@ -13,6 +13,10 @@ import Swinject
 final class WalletAssembly: Assembly {
     
     func assemble(container: Container) {
+        
+        container.storyboardInitCompleted(MyWalletViewController.self) { r, c in
+            c.presenter = MyWalletPresenterImpl(view: c, model: r.resolve(WalletModel.self)!)
+        }
 
         container.storyboardInitCompleted(WalletViewController.self) { (r, c) in
             c.presenter = WalletPresenterImpl(view: c, model: r.resolve(WalletModel.self)!)
@@ -29,7 +33,8 @@ final class WalletAssembly: Assembly {
         container.register(WalletModel.self) { r in
             let authService = r.resolve(AuthService.self)!
             let walletService = r.resolve(WalletService.self)!
-            return WalletModelImpl(authService: authService, walletService: walletService)
+            let stockService = r.resolve(StockService.self)!
+            return WalletModelImpl(authService: authService, walletService: walletService, stockService: stockService)
         }.inObjectScope(.weak)
         
         container.register(AuthService.self) { r in

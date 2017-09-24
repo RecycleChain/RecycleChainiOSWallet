@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import QRCode
 
 protocol WalletPresenter {
     func appear()
@@ -15,7 +16,8 @@ protocol WalletPresenter {
 
 protocol WalletView: class {
     func replaceWithSignIn()
-    func showBalance(balance: UserBalanceVO)
+    func showMyWallet()
+    func showMyStock()
 }
 
 class WalletPresenterImpl: WalletPresenter {
@@ -28,21 +30,15 @@ class WalletPresenterImpl: WalletPresenter {
     }
     
     func appear() {
-        if model.isLoggedIn {
-            loadBalance()
-        } else {
+        if !model.isLoggedIn {
             view?.replaceWithSignIn()
+        } else {
+            view?.showMyWallet()
         }
     }
     
     func logout() {
         model.logout()
         view?.replaceWithSignIn()
-    }
-    
-    private func loadBalance() {
-        model.loadBalance().addSuccess {[weak self] balance in
-            self?.view?.showBalance(balance: balance)
-        }
     }
 }

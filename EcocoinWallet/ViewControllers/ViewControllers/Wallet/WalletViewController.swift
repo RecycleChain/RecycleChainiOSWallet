@@ -10,10 +10,15 @@ import UIKit
 
 class WalletViewController: UIViewController, WalletView {
 
+    @IBOutlet weak var screenTypeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var myWalletContainer: UIView!
+    @IBOutlet weak var myStockContainer: UIView!
+    
     var presenter: WalletPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showMyWallet()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,14 +34,26 @@ class WalletViewController: UIViewController, WalletView {
         presenter?.logout()
     }
     
+    @IBAction func changeScreenType(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0: showMyWallet()
+        default: showMyStock()
+        }
+    }
+    
     //MARK: WalletView
     
     func replaceWithSignIn() {
         self.performSegue(withIdentifier: "ReplaceWithSignIn", sender: self)
     }
-
-    func showBalance(balance: UserBalanceVO) {
-        
+    
+    func showMyWallet() {
+        self.myWalletContainer.isHidden = false
+        self.myStockContainer.isHidden = true
     }
     
+    func showMyStock() {
+        self.myWalletContainer.isHidden = true
+        self.myStockContainer.isHidden = false
+    }
 }

@@ -79,7 +79,7 @@ extension BaseServiceRequestBuilderProtocol {
         request.httpMethod = route.method.rawValue
         
         if let token = self.token {
-            request.setValue(token, forHTTPHeaderField: "Authorization: Bearer")
+            request.setValue(token, forHTTPHeaderField: "Authorization")
         }
         
         return try URLEncoding.default.encode(request, with: route.parameters)

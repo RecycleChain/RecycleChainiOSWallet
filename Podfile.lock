@@ -8,9 +8,12 @@ PODS:
   - IQKeyboardManager (4.0.9)
   - ObjectMapper (2.2.6)
   - PKHUD (4.2.3)
+  - QRCode (2.0)
   - RoutableIOS (0.0.5):
     - RoutableIOS/Core (= 0.0.5)
   - RoutableIOS/Core (0.0.5)
+  - SnapKit (3.0.2)
+  - SwiftQRCode (3.0.2)
   - Swinject (2.1.0)
   - SwinjectStoryboard (1.1.1):
     - Swinject (~> 2.0)
@@ -22,7 +25,10 @@ DEPENDENCIES:
   - IQKeyboardManager (= 4.0.9)
   - ObjectMapper (= 2.2.6)
   - PKHUD (~> 4.0)
+  - QRCode (~> 2.0)
   - RoutableIOS (~> 0.0.2)
+  - SnapKit (~> 3.0.0)
+  - SwiftQRCode (~> 3.0.2)
   - Swinject (= 2.1.0)
   - SwinjectStoryboard (from `https://github.com/SeductiveMobile/SwinjectStoryboard.git`)
 
@@ -42,10 +48,13 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
   ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
   PKHUD: c7692163a09875cbf15827dc581df3c5cf7f1015
+  QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
   RoutableIOS: 176c749a21cae5d52282c2e41bde1d3b5958b565
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SwiftQRCode: 280589699d84195c2c573011aa52f2c015c31c34
   Swinject: 85e468ac75c5c2d234076f98c591d57d56bc64bc
   SwinjectStoryboard: 7ceaf15a4e85999ba7b2a9bcce5178ffc93705a8
 
-PODFILE CHECKSUM: 5d5408db6737b7984743bbb228a0ac7de5a1a739
+PODFILE CHECKSUM: d57ec4d35cf303da4313cc9489d11cde93b1edb6
 
 COCOAPODS: 1.2.0

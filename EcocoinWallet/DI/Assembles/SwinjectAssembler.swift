@@ -16,7 +16,8 @@ final class SwinjectAssembler {
     init() {
         let container = SwinjectStoryboard.defaultContainer
         let assemblies: [Assembly] = [
-            WalletAssembly()            
+            WalletAssembly(),
+            StockAssembly()
         ]
         assembler = Assembler(assemblies, container: container)
     }
