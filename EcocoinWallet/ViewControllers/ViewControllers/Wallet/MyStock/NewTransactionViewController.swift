@@ -45,9 +45,9 @@ class NewTransactionViewController: UIViewController, NewTransactionView {
     static var typeIndex: Int = 0
     
     @IBAction func addMaterial(_ sender: Any) {
-        
+        /*
         let types = [
-            MaterialVO(type: "Paper", amount: 10),
+            MaterialVO(type: "Paper", amount: 399),
             MaterialVO(type: "Bio", amount: 20),
             MaterialVO(type: "Bio", amount: 15),
             MaterialVO(type: "Bio", amount: 30),
@@ -58,6 +58,9 @@ class NewTransactionViewController: UIViewController, NewTransactionView {
         
         presenter?.addMaterial(material: types[NewTransactionViewController.typeIndex])
         NewTransactionViewController.typeIndex = (NewTransactionViewController.typeIndex + 1) % types.count
+         */
+        presenter?.addMaterial(material: MaterialVO(type: "Paper", amount: 399))
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
